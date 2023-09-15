@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# MOVIE BOX - HNG TASK 2
+## Running locally
+This app was built with **React** <br>
+Before installing all the necesssary packages, make sure you have the `package.json` file <br>
+Next, run `npm install` <br>
+To run locally, open the command line in this directory and run the following command
+`npm start`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This will open your app on the browser, most likely on **localhost:3000**
 
-## Available Scripts
+## Building and deploying
+The app was deployed on GitHub pages <br>
+First, the GitHub pages dependency was installed using 
+`npm install gh-pages`
 
-In the project directory, you can run:
+The **package.json** file was then modifed in the following areas: <br>
+` "homepage": "http://churchillv.github.io/hng-task-2",` <br>
+*This was a standalone property added to the **package.json** file*
 
-### `npm start`
+```
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*These two properties were added to the scripts section*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Commit and push these changes to Github
+After making these changes, run `npm deploy build` in the command line <br>
+This will create a build folder in your root directory
 
-### `npm test`
+Don't forget to install react-router-dom using `npm install react-router-dom` <br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Afterwards, within your **index.js** file, import `HashRouter` as shown below : <br>
+`import { HashRouter as Router } from "react-router-dom";`
 
-### `npm run build`
+Then, wrap your `<App/>` component within the `Router` components like so: <br>
+```
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <Router>
+    <App />
+  </Router>
+);
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+After this, you should be able to view your app live via Github pages <br>
+Head on to `Settings` in your Repo page, head to `Pages` and you should see the link to your app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## That's all Folks ✌️
+For a more detailed tutorial on hosting with Github pages, visit [LogRocket's Page](https://blog.logrocket.com/deploying-react-apps-github-pages/)
