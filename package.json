@@ -25,6 +25,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "http://churchillv.github.io/hng-task-2",
   "eslintConfig": {
     "extends": [
       "react-app",
