@@ -2,7 +2,7 @@
 ## Running locally
 This app was built with **React** <br>
 Before installing all the necesssary packages, make sure you have the `package.json` file <br>
-Next, run `npm install` <br>
+Next, run `npm install` to install all required dependencies<br>
 To run locally, open the command line in this directory and run the following command
 `npm start`
 
@@ -14,7 +14,9 @@ First, the GitHub pages dependency was installed using
 `npm install gh-pages`
 
 The **package.json** file was then modifed in the following areas: <br>
-` "homepage": "http://churchillv.github.io/hng-task-2",` <br>
+```
+"homepage": "http://{github-username}.github.io/{github-repo-name}"
+```
 *This was a standalone property added to the **package.json** file*
 
 ```
