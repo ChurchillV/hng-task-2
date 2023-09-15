@@ -24,7 +24,20 @@ The **package.json** file was then modifed in the following areas: <br>
 
 *These two properties were added to the scripts section*
 
-Commit and push these changes to Github
+Your scripts property should look like this:
+
+```
+ "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+```
+
+Commit and push these changes to Github <br>
 After making these changes, run `npm deploy build` in the command line <br>
 This will create a build folder in your root directory
 
@@ -42,7 +55,7 @@ root.render(
   </Router>
 );
 ```
-
+As always, push all these changes to your Github repo <br>
 After this, you should be able to view your app live via Github pages <br>
 Head on to `Settings` in your Repo page, head to `Pages` and you should see the link to your app
 
