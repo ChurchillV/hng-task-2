@@ -46,7 +46,9 @@ This will create a build folder in your root directory
 Don't forget to install react-router-dom using `npm install react-router-dom` <br>
 
 Afterwards, within your **index.js** file, import `HashRouter` as shown below : <br>
-`import { HashRouter as Router } from "react-router-dom";`
+```
+import { HashRouter as Router } from "react-router-dom";
+```
 
 Then, wrap your `<App/>` component within the `Router` components like so: <br>
 ```
